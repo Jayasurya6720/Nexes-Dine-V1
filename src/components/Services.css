@@ -1,0 +1,139 @@
+/* SECTION */
+.services-section {
+  width: 90%;
+  margin: 1px auto;
+  color: #fff;
+}
+
+/* GRID */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+/* CARD */
+.service-card {
+  position: relative;
+  height: 260px;
+  border-radius: 25px;
+  overflow: hidden;
+  cursor: pointer;
+  background: #000;
+}
+
+/* IMAGE */
+.service-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.service-card:hover img {
+  transform: scale(1.1);
+}
+
+/* OVERLAY */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.6),
+    rgba(0, 0, 0, 0.1)
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 20px;
+  transition: background 0.4s ease;
+}
+
+/* TITLE – DEFAULT BOTTOM */
+.overlay h3 {
+   position: absolute;
+  bottom: 20px;              /* 👈 bottom position */
+  left: 20px;
+  right: 20px;
+  font-family: "Playfair Display", serif;
+  font-size: 22px;
+  color: #fff;
+  margin: 0;
+  transition: all 0.4s ease;
+}
+
+/* DESCRIPTION – HIDDEN INITIALLY */
+.overlay p {
+  position: absolute;
+  bottom: -20px;             /* 👈 hidden below */
+  left: 20px;
+  right: 20px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #eee;
+  opacity: 0;
+  transition: all 0.4s ease;
+
+}
+
+/* HOVER EFFECT */
+.service-card:hover .overlay {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+/* TITLE MOVES UP ON HOVER */
+.service-card:hover .overlay h3 {
+  bottom: 70px; 
+  color: #d4af37;
+  transform: translateY(-30px);
+}
+
+/* DESCRIPTION SHOW ON HOVER */
+.service-card:hover .overlay p {
+  opacity: 1;
+  transform: translateY(-20px);
+}
+
+/* WHY NEXES */
+.why-nexes {
+  margin-top: 80px;
+  background: #f3e6c8;
+  padding: 35px 40px;
+  border-radius: 10px;
+  color: #000;
+}
+
+.why-nexes h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.why-nexes p {
+  max-width: 900px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.why-nexes button {
+  padding: 10px 22px;
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}

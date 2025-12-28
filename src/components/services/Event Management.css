@@ -1,0 +1,423 @@
+/* =========================
+   EVENT MANAGEMENT HERO
+   ========================= */
+
+.em-hero {
+  width: 100%;
+  height: 100%;
+  background-image: url("https://nexesdinesolution.com/backend/uploads/image/ServicesPgBackgroundImage/1766839686_EventManagementBC.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.em-overlay {
+  width: 100%;
+  height: 100%;
+  padding: 90px 80px;
+  color: #fff;
+}
+
+/* CENTER TOP */
+.em-top-center {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.em-page-title {
+  font-family: "Playfair Display", serif;
+  font-size: 64px;
+  margin-bottom: 20px;
+}
+
+.em-breadcrumb {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 18px;
+  color: #ddd;
+}
+
+.em-home-btn {
+  background: #000;
+  padding: 10px 22px;
+  border-radius: 30px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.em-breadcrumb .active {
+  color: #fff;
+}
+
+/* LEFT CONTENT */
+/* .em-content-left {
+  max-width: 950px;
+} */
+
+.em-heading {
+  font-family: "Playfair Display", serif;
+  font-size: 54px;
+  line-height: 1.25;
+  margin-bottom: 25px;
+}
+
+.em-heading span {
+  color: #d4af37;
+}
+
+.em-desc {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #eaeaea;
+}
+
+/* =========================
+   WHAT WE DO – FLIP CARDS
+   ========================= */
+
+.em-whatwedo {
+  padding: 120px 80px;
+  background: #000;
+  color: #fff;
+}
+
+.em-section-title {
+  font-family: "Playfair Display", serif;
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+
+.em-section-title span {
+  color: #d4af37;
+}
+
+.em-section-desc {
+  max-width: 850px;
+  color: #ddd;
+  line-height: 1.7;
+  margin-bottom: 60px;
+}
+
+/* GRID */
+.em-card-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+
+/* FLIP CARD */
+.em-flip-card {
+  perspective: 1200px;
+}
+
+/* INNER */
+.em-flip-inner {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.8s ease;
+}
+
+/* FLIP ON HOVER */
+.em-flip-card:hover .em-flip-inner {
+  transform: rotateY(180deg);
+}
+
+/* FRONT & BACK COMMON */
+.em-flip-front,
+.em-flip-back {
+  backface-visibility: hidden;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+/* FRONT – IMAGE ONLY (IMPORTANT) */
+.em-flip-front img {
+  width: 100%;
+  height: auto;          /* 🔥 original image ratio */
+  display: block;
+}
+
+/* BACK – TEXT */
+.em-flip-back {
+  position: absolute;
+  inset: 0;
+  background: #111;
+  transform: rotateY(180deg);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 30px;
+  text-align: center;
+}
+
+.em-flip-back h3 {
+  font-family: "Playfair Display", serif;
+  color: #d4af37;
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.em-flip-back p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #ddd;
+}
+
+.em-flip-back span {
+  margin-top: 18px;
+  font-size: 13px;
+  color: #aaa;
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (max-width: 1024px) {
+  .em-card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .em-overlay,
+  .em-whatwedo {
+    padding: 80px 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .em-card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .em-page-title {
+    font-size: 46px;
+  }
+
+  .em-heading {
+    font-size: 38px;
+  }
+}
+
+
+/* ===========================
+   MOMENTS SLIDER SECTION
+   =========================== */
+
+.em-moments {
+  background: #000;
+  padding: 120px 80px;
+  color: #fff;
+}
+
+.em-moments-title {
+  font-family: "Playfair Display", serif;
+  font-size: 42px;
+  color: #d4af37;
+  margin-bottom: 20px;
+}
+
+.em-moments-desc {
+  max-width: 900px;
+  font-size: 17px;
+  line-height: 1.8;
+  color: #ddd;
+  margin-bottom: 40px;
+}
+
+.em-moments-sub {
+  font-family: "Playfair Display", serif;
+  font-size: 28px;
+  color: #d4af37;
+  margin-bottom: 50px;
+}
+
+/* SLIDER */
+.em-slider-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.em-arrow {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 32px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.em-arrow:hover {
+  opacity: 0.6;
+}
+
+/* GRID */
+.em-slider-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  flex: 1;
+}
+
+/* IMAGE CARD */
+.em-slide-card {
+  border-radius: 18px;
+  overflow: hidden;
+  background: #e5e5e5;
+}
+
+.em-slide-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .em-slider-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .em-slider-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .em-moments {
+    padding: 80px 30px;
+  }
+}
+
+/* video section */
+
+.pride-section {
+  background: #000;
+  padding: 120px 80px;
+  color: #fff;
+}
+
+.pride-title {
+  font-family: "Playfair Display", serif;
+  color: #d4af37;
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+
+/* BORDER BOX */
+.pride-box {
+  border: 1px solid rgba(255,255,255,0.4);
+  border-radius: 24px;
+  padding: 50px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+/* ARROWS */
+.pride-arrow {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 32px;
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.pride-arrow:hover {
+  opacity: 1;
+}
+
+/* VIDEOS */
+.pride-videos {
+  display: flex;
+  gap: 30px;
+  flex: 1;
+}
+
+.pride-card {
+  flex: 1;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  background: #fff;
+}
+
+.pride-card video {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+/* PLAY BUTTON */
+.play-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+  color: #d4af37;
+  pointer-events: none;
+}
+
+.pride-card video:not(:paused) + .play-overlay {
+  display: none;
+}
+
+/* CTA */
+.pride-cta {
+  margin-top: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pride-cta h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 34px;
+  color: #d4af37;
+}
+
+.pride-cta p {
+  margin-top: 15px;
+  color: #ddd;
+  max-width: 520px;
+}
+
+.pride-btn {
+  background: #fff;
+  color: #000;
+  border: none;
+  padding: 16px 34px;
+  font-size: 18px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .pride-box {
+    flex-direction: column;
+  }
+
+  .pride-videos {
+    flex-direction: column;
+  }
+
+  .pride-card video {
+    height: 220px;
+  }
+
+  .pride-cta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+  }
+}
+

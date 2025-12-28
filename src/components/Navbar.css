@@ -1,0 +1,128 @@
+.navbar {
+  width: 90%;
+  margin: 20px auto;
+  padding: 14px 30px;
+  border: 1px solid #333;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: transparent;
+  position: relative;
+}
+
+.logo img {
+  width: 40px;
+  cursor: pointer;
+}
+
+/* DESKTOP LINKS */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  font-family: "Playfair Display", serif;
+}
+
+.nav-links li {
+  cursor: pointer;
+  color: #fff;
+  position: relative;
+}
+
+/* DROPDOWN */
+.dropdown {
+  position: absolute;
+  top: 35px;
+  left: 0;
+  background: #000;
+  border: 1px solid #333;
+  border-radius: 12px;
+  list-style: none;
+  padding: 10px 0;
+  width: 200px;
+  z-index: 100;
+}
+
+.dropdown li {
+  padding: 10px 20px;
+  color: #fff;
+}
+
+.dropdown li:hover {
+  background: #d4af37;
+  color: #000;
+}
+
+/* RIGHT */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.phone-btn {
+  background: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 8px 18px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+/* BURGER */
+.menu-icon {
+  font-size: 26px;
+  cursor: pointer;
+  display: none;
+  color: #fff;
+}
+
+/* MOBILE MENU */
+.mobile-menu {
+  position: absolute;
+  top: 80px;
+  right: 0;
+  background: #000;
+  border: 1px solid #333;
+  border-radius: 20px;
+  padding: 20px 25px;
+  width: 260px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 999;
+}
+
+.mobile-menu p {
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.mobile-sub {
+  padding-left: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.mobile-sub p {
+  color: #d4af37;
+  font-size: 15px;
+}
+
+/* 🔥 RESPONSIVE */
+@media (max-width: 900px) {
+  .nav-links {
+    display: none;      /* hide desktop menu */
+  }
+
+  .phone-btn {
+    display: none;
+  }
+
+  .menu-icon {
+    display: block;    /* show burger */
+  }
+}

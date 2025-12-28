@@ -1,0 +1,157 @@
+.contact-section {
+  width: 90%;
+  margin: 50px auto;
+  color: #fff;
+}
+
+.contact-section h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 42px;
+  color: #d4af37;
+}
+
+.contact-sub {
+  margin-top: 10px;
+  max-width: 900px;
+  color: #ddd;
+  line-height: 1.6;
+}
+
+/* Layout */
+.contact-wrapper {
+  margin-top: 60px;
+  display: flex;
+  gap: 80px;
+  align-items: center;
+}
+
+/* FORM */
+.contact-form {
+  flex: 1;
+  border: 1px solid #555;
+  border-radius: 20px;
+  padding: 35px;
+}
+
+.input-box,
+.textarea-box {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.input-box input {
+  width: 100%;
+  padding: 16px 16px 16px 45px;
+  background: transparent;
+  border: 1px solid #444;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 14px;
+}
+
+.textarea-box textarea {
+  width: 100%;
+  height: 140px;
+  padding: 15px;
+  background: transparent;
+  border: 1px solid #444;
+  border-radius: 10px;
+  color: #fff;
+  resize: none;
+}
+
+.icon {
+  position: absolute;
+  top: 50%;
+  left: 14px;
+  transform: translateY(-50%);
+  opacity: 0.7;
+}
+
+.contact-btn {
+  margin-top: 10px;
+  padding: 12px 26px;
+  background: transparent;
+  border: 1px solid #fff;
+  border-radius: 25px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.contact-btn:hover {
+  background: #fff;
+  color: #000;
+}
+
+/* RIGHT IMAGE */
+.contact-illustration {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-illustration img {
+  max-width: 420px;
+}
+/* =========================
+   CONTACT – RESPONSIVE
+   ========================= */
+
+/* TABLET */
+@media (max-width: 1024px) {
+  .contact-wrapper {
+    gap: 40px;
+  }
+
+  .contact-illustration img {
+    max-width: 350px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .contact-section {
+    margin: 40px auto;
+    text-align: center;
+  }
+
+  .contact-section h2 {
+    font-size: 32px;
+  }
+
+  .contact-sub {
+    font-size: 14px;
+    margin: 12px auto 0;
+  }
+
+  .contact-wrapper {
+    flex-direction: column;
+    margin-top: 40px;
+  }
+
+  /* 🔥 HIDE RIGHT IMAGE */
+  .contact-illustration {
+    display: none;
+  }
+
+  .contact-form {
+    width: 100%;
+    padding: 30px 22px;
+  }
+
+  .contact-btn {
+    width: 100%;
+  }
+}
+
+/* SMALL MOBILE */
+@media (max-width: 480px) {
+  .contact-section h2 {
+    font-size: 28px;
+  }
+
+  .contact-form {
+    padding: 25px 18px;
+  }
+}
